@@ -1,0 +1,2 @@
+module Settings::RequiresAuthenticationHelper
+end

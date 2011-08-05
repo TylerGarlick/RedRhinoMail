@@ -1,0 +1,114 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Thu Aug 04 22:17:02 -0600 2011
+Served asset /rails.png - 200 OK (5ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Thu Aug 04 22:55:01 -0600 2011
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Thu Aug 04 23:01:03 -0600 2011
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Thu Aug 04 23:01:07 -0600 2011
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Thu Aug 04 23:02:31 -0600 2011
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Thu Aug 04 23:02:40 -0600 2011
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 04 23:05:05 -0600 2011
+  Processing by DashboardsController#show as HTML
+Rendered dashboards/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at Thu Aug 04 23:05:05 -0600 2011
+Compiled ~/Documents/Rails/redrhinomail/app/assets/stylesheets/application.css  (1ms)  (pid 1503)
+Compiled ~/Documents/Rails/redrhinomail/app/assets/stylesheets/dashboards.css.scss  (2ms)  (pid 1503)
+Compiled ~/Documents/Rails/redrhinomail/app/assets/stylesheets/application.css  (0ms)  (pid 1503)
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Thu Aug 04 23:05:05 -0600 2011
+Served asset /defaults.js - 404 Not Found (51ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 04 23:09:23 -0600 2011
+
+ActionController::RoutingError (uninitialized constant RequiresAuthentication):
+  app/controllers/dashboards_controller.rb:1
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 04 23:12:57 -0600 2011
+
+ActionController::RoutingError (uninitialized constant RequiresAuthentication):
+  app/controllers/dashboards_controller.rb:1
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 04 23:13:00 -0600 2011
+
+ActionController::RoutingError (uninitialized constant RequiresAuthentication):
+  app/controllers/dashboards_controller.rb:1
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 04 23:15:31 -0600 2011
+
+ActionController::RoutingError (uninitialized constant RequiresAuthentication):
+  app/controllers/dashboards_controller.rb:1
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 04 23:15:54 -0600 2011
+
+ActionController::RoutingError (uninitialized constant ApplicationControllers):
+  app/controllers/dashboards_controller.rb:1
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Aug 04 23:18:26 -0600 2011
+  Processing by DashboardsController#show as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at Thu Aug 04 23:18:26 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Thu Aug 04 23:18:26 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at Thu Aug 04 23:18:27 -0600 2011
+Compiled ~/Documents/Rails/redrhinomail/app/assets/stylesheets/application.css  (3ms)  (pid 1503)
+Compiled ~/Documents/Rails/redrhinomail/app/assets/stylesheets/settings/requires_authentication.css.scss  (1ms)  (pid 1503)
+Compiled ~/Documents/Rails/redrhinomail/app/assets/stylesheets/application.css  (0ms)  (pid 1503)
+Served asset /application.css - 304 Not Modified (15ms)
