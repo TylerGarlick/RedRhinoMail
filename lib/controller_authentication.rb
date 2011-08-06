@@ -14,10 +14,10 @@
 # You can also restrict unregistered users from accessing a controller using
 # a before filter. For example.
 #
-#   before_filter :login_required, :except => [:index, :show]
+#   before_filter :login_required, :except => [:index, :index]
 module ControllerAuthentication
   def self.included(controller)
-    controller.send :helper_method, :current_user, :logged_in?, :redirect_to_target_or_default
+    controller.send :helper_method, :current_user, :logged_in?, :redirect_to_target_or_default, :is_admin?
   end
 
   def current_user
@@ -26,6 +26,10 @@ module ControllerAuthentication
 
   def logged_in?
     current_user
+  end
+
+  def is_admin?
+    current_user.role.name == "Admin"
   end
 
   def login_required

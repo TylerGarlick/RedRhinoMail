@@ -1,5 +1,4 @@
 Redrhinomail::Application.routes.draw do
-  get "dashboards/show"
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
@@ -13,6 +12,9 @@ Redrhinomail::Application.routes.draw do
 
   resources :users
 
+    namespace :settings do
+    resources :companies
+    end
   root :to => "dashboards#show"
   # The priority is based upon order of creation:
   # first created -> highest priority.

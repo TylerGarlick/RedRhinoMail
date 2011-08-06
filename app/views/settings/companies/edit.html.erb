@@ -1,0 +1,21 @@
+<h1>Edit: <%= @company.name %></h1>
+
+<%= form_for [:settings, @company], :html => { :multipart => true }   do |f| %>
+	<%= f.error_messages %>
+	<div class="fields">
+		<%= f.label :name, 'Company Name' %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="fields">
+		<%= f.label :phone %>
+		<%= f.text_field :phone %>
+	</div>
+	
+	<div class="fields">
+		<%= f.label :website %>
+		<%= f.text_field :website %>
+	</div>
+	<div class="buttons">
+		<%= f.submit 'Update' %>
+	</div>
+<% end %>

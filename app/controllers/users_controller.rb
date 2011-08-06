@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   before_filter :login_required, :except => [:new, :create]
+   def index
+	  @users = current_user.company.users
+  end
   def new
     @user = User.new
   end

@@ -112,3 +112,1467 @@ Compiled ~/Documents/Rails/redrhinomail/app/assets/stylesheets/application.css  
 Compiled ~/Documents/Rails/redrhinomail/app/assets/stylesheets/settings/requires_authentication.css.scss  (1ms)  (pid 1503)
 Compiled ~/Documents/Rails/redrhinomail/app/assets/stylesheets/application.css  (0ms)  (pid 1503)
 Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 22:51:23 -0600 2011
+  Processing by DashboardsController#show as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at Fri Aug 05 22:51:23 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at Fri Aug 05 22:51:24 -0600 2011
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 22:51:24 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Fri Aug 05 22:51:26 -0600 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (9.8ms)
+Rendered users/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 22:51:26 -0600 2011
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at Fri Aug 05 22:51:26 -0600 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri Aug 05 22:51:50 -0600 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"dGHSMxiP+CXkAiIxsgw5xtw6ff+muLPcwrLsu//fsEc=", "utf8"=>"\342\234\223", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"cadecote", "password"=>"[FILTERED]", "email"=>"ccote@nexbusiness.com"}}
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'cadecote' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'ccote@nexbusiness.com' LIMIT 1
+  [1m[36mSQL (8.2ms)[0m  [1mINSERT INTO "users" ("company_id", "created_at", "email", "password_hash", "password_salt", "role_id", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", nil], ["created_at", Sat, 06 Aug 2011 04:51:50 UTC +00:00], ["email", "ccote@nexbusiness.com"], ["password_hash", "$2a$10$QmparAe.g08h0yTZt0xbl.MfAHN0003m/8lzDouqoRH2BSViYq.DG"], ["password_salt", "$2a$10$QmparAe.g08h0yTZt0xbl."], ["role_id", nil], ["updated_at", Sat, 06 Aug 2011 04:51:50 UTC +00:00], ["username", "cadecote"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 22:51:50 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 15ms (Views: 6.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 22:51:50 -0600 2011
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at Fri Aug 05 22:51:50 -0600 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:39:14 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined method `company' for #<User:0x1037c24b0>):
+    33: 		<div id="container">
+    34: 	    <header>
+    35: 				<% if current_user %>
+    36: 				<div class="company-name"><%= current_user.company.name %></div>
+    37: 				<% end %>
+    38: 				<ul class="navigation">
+    39: 					<li><%= link_to 'Dashboard', root_url %></li>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___1241659434_2176709840'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:43:07 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.0ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 98ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    33: 		<div id="container">
+    34: 	    <header>
+    35: 				<% if current_user %>
+    36: 				<div class="company-name"><%= current_user.company.name %></div>
+    37: 				<% end %>
+    38: 				<ul class="navigation">
+    39: 					<li><%= link_to 'Dashboard', root_url %></li>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___1241659434_2176709840'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:44:51 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.0ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    33: 		<div id="container">
+    34: 	    <header>
+    35: 				<% if current_user %>
+    36: 				<div class="company-name"><%= current_user.company.name %></div>
+    37: 				<% end %>
+    38: 				<ul class="navigation">
+    39: 					<li><%= link_to 'Dashboard', root_url %></li>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___1241659434_2176709840'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:47:57 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 171ms
+
+ActionView::Template::Error (undefined local variable or method `settings_companies_url' for #<#<Class:0x1033e27f0>:0x1033d9d08>):
+    38: 						<div class="submenu">
+    39: 							<ul>
+    40: 								<li><%= link_to 'Users', users_url %></li>
+    41: 								<li><%= link_to 'Company', settings_companies_url %></li>
+    42: 							</ul>
+    43: 						</div>
+    44: 					</li>
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___1241659434_2174687160'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:49:57 -0600 2011
+
+SyntaxError (/Users/stephencote/Documents/Rails/redrhinomail/config/routes.rb:76: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:50:45 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 6.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:50:45 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:50:45 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:50:45 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:50:50 -0600 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for Settings::CompaniesController):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:52:00 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Rendered settings/companies/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @company.name %></h1>
+    2: <div class="actions"><%= link_to 'Edit', edit_settings_company_url(@company) %></div>
+  app/views/settings/companies/index.html.erb:1:in `_app_views_settings_companies_index_html_erb___248910864_2174287200'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:54:12 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Rendered settings/companies/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @company.name %></h1>
+    2: <div class="actions"><%= link_to 'Edit', edit_settings_company_url(@company) %></div>
+  app/views/settings/companies/index.html.erb:1:in `_app_views_settings_companies_index_html_erb___248910864_2175392480'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Fri Aug 05 23:54:16 -0600 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:54:19 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Rendered settings/companies/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @company.name %></h1>
+    2: <div class="actions"><%= link_to 'Edit', edit_settings_company_url(@company) %></div>
+  app/views/settings/companies/index.html.erb:1:in `_app_views_settings_companies_index_html_erb___248910864_2175392480'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:54:54 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 6.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:54:54 -0600 2011
+Served asset /style.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:54:54 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:54:54 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:54:56 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Rendered settings/companies/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @company.name %></h1>
+    2: <div class="actions"><%= link_to 'Edit', edit_settings_company_url(@company) %></div>
+  app/views/settings/companies/index.html.erb:1:in `_app_views_settings_companies_index_html_erb___248910864_2175392480'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.1ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:55:03 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Rendered settings/companies/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @company.name %></h1>
+    2: <div class="actions"><%= link_to 'Edit', edit_settings_company_url(@company) %></div>
+  app/views/settings/companies/index.html.erb:1:in `_app_views_settings_companies_index_html_erb___248910864_2175392480'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:55:07 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 6.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:55:07 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:55:07 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:55:07 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:55:10 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Rendered settings/companies/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @company.name %></h1>
+    2: <div class="actions"><%= link_to 'Edit', edit_settings_company_url(@company) %></div>
+  app/views/settings/companies/index.html.erb:1:in `_app_views_settings_companies_index_html_erb___248910864_2175392480'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:56:05 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Rendered settings/companies/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @company.name %></h1>
+    2: <div class="actions"><%= link_to 'Edit', edit_settings_company_url(@company) %></div>
+  app/views/settings/companies/index.html.erb:1:in `_app_views_settings_companies_index_html_erb___248910864_2175392480'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:56:09 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.1ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 101ms (Views: 37.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:56:09 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:56:09 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:56:09 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:56:15 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Rendered settings/companies/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @company.name %></h1>
+    2: <div class="actions"><%= link_to 'Edit', edit_settings_company_url(@company) %></div>
+  app/views/settings/companies/index.html.erb:1:in `_app_views_settings_companies_index_html_erb___248910864_2175392480'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Aug 05 23:57:55 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.1ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 98ms (Views: 30.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:57:55 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:57:55 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:57:55 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:57:57 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered settings/companies/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 32ms (Views: 10.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:57:57 -0600 2011
+Served asset /defaults.js - 404 Not Found (55ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:57:57 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:57:57 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:57:57 -0600 2011
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/settings/companies/1/edit" for 127.0.0.1 at Fri Aug 05 23:58:00 -0600 2011
+  Processing by Settings::CompaniesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered settings/companies/edit.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 89ms
+
+ActionView::Template::Error (undefined method `office_number' for #<Company:0x103a543e0>):
+    8: 	</div>
+    9: 	<div class="fields">
+    10: 		<%= f.label :office_number %>
+    11: 		<%= f.text_field :office_number %>
+    12: 	</div>
+    13: 	
+    14: 	<div class="fields">
+  app/views/settings/companies/edit.html.erb:11:in `_app_views_settings_companies_edit_html_erb__1029819435_2178023460'
+  app/views/settings/companies/edit.html.erb:3:in `_app_views_settings_companies_edit_html_erb__1029819435_2178023460'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:58:39 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered settings/companies/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 76ms (Views: 10.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:58:40 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:58:40 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:58:40 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/settings/companies/1/edit" for 127.0.0.1 at Fri Aug 05 23:58:41 -0600 2011
+  Processing by Settings::CompaniesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered settings/companies/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 35ms (Views: 12.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:58:41 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:58:41 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:58:41 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started PUT "/settings/companies/1" for 127.0.0.1 at Fri Aug 05 23:58:47 -0600 2011
+  Processing by Settings::CompaniesController#update as HTML
+  Parameters: {"company"=>{"name"=>"cades company", "website"=>"www.cadeisdabomb.com", "phone"=>"8015555555"}, "commit"=>"Update", "authenticity_token"=>"dGHSMxiP+CXkAiIxsgw5xtw6ff+muLPcwrLsu//fsEc=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "companies" WHERE ("companies"."name" = 'cades company' AND "companies"."id" != 1) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "companies" SET "name" = 'cades company' WHERE "companies"."id" = 1[0m
+Redirected to http://localhost:3000/settings/companies/1
+Completed 302 Found in 33ms
+
+
+Started GET "/settings/companies/1" for 127.0.0.1 at Fri Aug 05 23:58:47 -0600 2011
+  Processing by Settings::CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 32ms
+
+ActionView::MissingTemplate (Missing template settings/companies/show, application/show with {:handlers=>[:builder, :erb], :locale=>[:en, :en], :formats=>[:html]}. Searched in:
+  * "/Users/stephencote/Documents/Rails/redrhinomail/app/views"
+):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Fri Aug 05 23:59:27 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered settings/companies/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 36ms (Views: 14.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:59:27 -0600 2011
+Served asset /style.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:59:27 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:59:27 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/settings/companies/1/edit" for 127.0.0.1 at Fri Aug 05 23:59:29 -0600 2011
+  Processing by Settings::CompaniesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered settings/companies/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 88ms (Views: 13.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Fri Aug 05 23:59:29 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Fri Aug 05 23:59:29 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Fri Aug 05 23:59:29 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started PUT "/settings/companies/1" for 127.0.0.1 at Fri Aug 05 23:59:36 -0600 2011
+  Processing by Settings::CompaniesController#update as HTML
+  Parameters: {"company"=>{"name"=>"cades co", "website"=>"www.cadeisdabomb.com", "phone"=>"8015555555"}, "commit"=>"Update", "authenticity_token"=>"dGHSMxiP+CXkAiIxsgw5xtw6ff+muLPcwrLsu//fsEc=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "companies" WHERE ("companies"."name" = 'cades co' AND "companies"."id" != 1) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "companies" SET "name" = 'cades co' WHERE "companies"."id" = 1[0m
+Redirected to http://localhost:3000/settings/companies/1
+Completed 302 Found in 95ms
+
+
+Started GET "/settings/companies/1" for 127.0.0.1 at Fri Aug 05 23:59:36 -0600 2011
+
+AbstractController::ActionNotFound (The action 'show' could not be found for Settings::CompaniesController):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/settings/companies/1" for 127.0.0.1 at Sat Aug 06 00:00:02 -0600 2011
+  Processing by Settings::CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 26ms
+
+ActionView::MissingTemplate (Missing template settings/companies/show, application/show with {:handlers=>[:builder, :erb], :locale=>[:en, :en], :formats=>[:html]}. Searched in:
+  * "/Users/stephencote/Documents/Rails/redrhinomail/app/views"
+):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:16:42 -0600 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:19:50 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1
+Rendered users/index.html.erb within layouts/application (144.8ms)
+Completed 500 Internal Server Error in 181ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x10354ae80>:0x1035403b8>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2175399540'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (41.4ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:22:01 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."company_id" = 1[0m
+Rendered users/index.html.erb within layouts/application (193.6ms)
+Completed 500 Internal Server Error in 223ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x1032aa928>:0x10329e830>):
+    1: <h1>Users</h1>
+    2: <!-- <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %> -->
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2174015340'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:26:19 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1
+Rendered users/index.html.erb within layouts/application (148.3ms)
+Completed 500 Internal Server Error in 229ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x1036ee048>:0x1036de670>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2176243640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:26:58 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."company_id" = 1[0m
+Rendered users/index.html.erb within layouts/application (187.8ms)
+Completed 500 Internal Server Error in 216ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x103326cf8>:0x103321ac8>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2176243640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:27:00 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1
+Rendered users/index.html.erb within layouts/application (148.2ms)
+Completed 500 Internal Server Error in 228ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x1037db0f0>:0x1037c1c68>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2176243640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:28:38 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."company_id" = 1[0m
+Rendered users/index.html.erb within layouts/application (187.6ms)
+Completed 500 Internal Server Error in 216ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x1033d7238>:0x1033d2738>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2176243640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:29:01 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1
+Rendered users/index.html.erb within layouts/application (148.4ms)
+Completed 500 Internal Server Error in 224ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x103997588>:0x1038ea2e8>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2176243640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:29:07 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."company_id" = 1[0m
+Rendered users/index.html.erb within layouts/application (153.0ms)
+Completed 500 Internal Server Error in 183ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x1034eb098>:0x1034db620>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2176243640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:29:28 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1
+Rendered users/index.html.erb within layouts/application (198.0ms)
+Completed 500 Internal Server Error in 226ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x10323a880>:0x103236578>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2176243640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 06 00:29:33 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.0ms)
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+Completed 200 OK in 98ms (Views: 33.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:29:33 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:29:33 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:29:33 -0600 2011
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sat Aug 06 00:29:35 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+Rendered settings/companies/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 9.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:29:36 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:29:36 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:29:36 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:29:38 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."company_id" = 1[0m
+Rendered users/index.html.erb within layouts/application (188.4ms)
+Completed 500 Internal Server Error in 216ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x1032e0690>:0x1032d7ae0>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2176243640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 06 00:29:44 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.1ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 91ms (Views: 75.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:29:44 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:29:44 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:29:44 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sat Aug 06 00:29:49 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered settings/companies/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 32ms (Views: 10.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:29:49 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:29:49 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:29:49 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:29:49 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:29:52 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1
+Rendered users/index.html.erb within layouts/application (190.7ms)
+Completed 500 Internal Server Error in 218ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x1033750b0>:0x103369f58>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2176243640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:30:39 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."company_id" = 1[0m
+Rendered users/index.html.erb within layouts/application (153.2ms)
+Completed 500 Internal Server Error in 224ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x103a448c8>:0x103a07338>):
+    1: <h1>Users</h1>
+    2: <% if is_admin? %>
+    3: 	<%= link_to 'New User', new_user_url%>
+    4: <% end %>
+    5: <table>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___1330398349_2177902640'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:31:29 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1
+Rendered users/index.html.erb within layouts/application (148.1ms)
+Completed 500 Internal Server Error in 177ms
+
+ActionView::Template::Error (undefined method `is_admin?' for #<#<Class:0x10352d150>:0x103523b28>):
+    10: 	<tr>
+    11: 		<td><%= u.username %></td>
+    12: 		<td><%= u.email %></td>
+    13: 		<% if is_admin? %>
+    14: 			<td><%= link_to 'Edit', edit_user_url(u) %></td>
+    15: 		<% end %>
+    16: 	</tr>
+  app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___1330398349_2175339320'
+  app/views/users/index.html.erb:9:in `_app_views_users_index_html_erb___1330398349_2175339320'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:33:17 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1
+Rendered users/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 97ms (Views: 74.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:33:18 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:33:18 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:33:18 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Aug 06 00:33:20 -0600 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Rendered users/_form.html.erb (7.7ms)
+Rendered users/edit.html.erb within layouts/application (8.9ms)
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+Completed 200 OK in 105ms (Views: 102.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:33:21 -0600 2011
+Served asset /style.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:33:21 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:33:21 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:33:21 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sat Aug 06 00:33:34 -0600 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (7.8ms)
+Rendered users/new.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+Completed 200 OK in 93ms (Views: 91.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:33:34 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:33:34 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:33:34 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sat Aug 06 00:33:58 -0600 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"dGHSMxiP+CXkAiIxsgw5xtw6ff+muLPcwrLsu//fsEc=", "utf8"=>"\342\234\223", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"mecote", "password"=>"[FILTERED]", "email"=>"cote.cade@gmail.com"}}
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'mecote' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'cote.cade@gmail.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("company_id", "created_at", "email", "password_hash", "password_salt", "role_id", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", nil], ["created_at", Sat, 06 Aug 2011 06:33:59 UTC +00:00], ["email", "cote.cade@gmail.com"], ["password_hash", "$2a$10$kdg5LyDX6gbGtn.qYVVDzO1cpk9rR5QOwBSl1O4K2azoZY5kUs/gG"], ["password_salt", "$2a$10$kdg5LyDX6gbGtn.qYVVDzO"], ["role_id", nil], ["updated_at", Sat, 06 Aug 2011 06:33:59 UTC +00:00], ["username", "mecote"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 113ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 06 00:33:59 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Rendered dashboards/show.html.erb within layouts/application (0.0ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 98ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    33: 		<div id="container">
+    34: 	    <header>
+    35: 				<% if current_user %>
+    36: 				<div class="company-name"><%= current_user.company.name %></div>
+    37: 				<% end %>
+    38: 				<ul class="navigation">
+    39: 					<li><%= link_to 'Dashboard', root_url %></li>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___1241659434_2176676900'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 06 00:34:18 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Rendered dashboards/show.html.erb within layouts/application (0.1ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 94ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    33: 		<div id="container">
+    34: 	    <header>
+    35: 				<% if current_user %>
+    36: 				<div class="company-name"><%= current_user.company.name %></div>
+    37: 				<% end %>
+    38: 				<ul class="navigation">
+    39: 					<li><%= link_to 'Dashboard', root_url %></li>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___1241659434_2176676900'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 06 00:34:46 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Rendered dashboards/show.html.erb within layouts/application (0.0ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 101ms (Views: 34.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:34:47 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:34:47 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:34:47 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Aug 06 00:34:50 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."company_id" = 1[0m
+Rendered users/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 49ms (Views: 26.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:34:50 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:34:50 -0600 2011
+Served asset /style.css - 404 Not Found (54ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:34:50 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at Sat Aug 06 00:34:52 -0600 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Rendered users/_form.html.erb (7.8ms)
+Rendered users/edit.html.erb within layouts/application (8.7ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sat Aug 06 00:34:53 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sat Aug 06 00:34:53 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sat Aug 06 00:34:53 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
