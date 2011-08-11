@@ -1,0 +1,16 @@
+<h1>Edit: <%= @list.name %></h1>
+
+<%= form_for [:settings, @list], :html => { :multipart => true }   do |f| %>
+	<%= f.error_messages %>
+	<div class="fields">
+		<%= f.label :name, 'List Name' %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="fields">
+		<%= f.label :is_active %>
+		<%= f.check_box :is_active %>
+	</div>
+	<div class="buttons">
+		<%= f.submit 'Update' %>
+	</div>
+<% end %>

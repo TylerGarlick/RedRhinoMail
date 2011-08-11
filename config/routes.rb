@@ -14,6 +14,7 @@ Redrhinomail::Application.routes.draw do
 
     namespace :settings do
     resources :companies
+    resources :lists
     end
   root :to => "dashboards#show"
   # The priority is based upon order of creation:

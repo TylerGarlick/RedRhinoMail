@@ -1576,3 +1576,525 @@ ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
   
 
 Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 07 21:42:29 -0600 2011
+  Processing by DashboardsController#show as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 21:42:29 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 22ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 21:42:29 -0600 2011
+Served asset /style.css - 404 Not Found (51ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 21:42:29 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 21:42:29 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sun Aug 07 21:42:35 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `company' for nil:NilClass):
+  app/controllers/settings/companies_controller.rb:21:in `get_company'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.9ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sun Aug 07 21:44:25 -0600 2011
+
+SyntaxError (/Users/stephencote/Documents/Rails/redrhinomail/app/controllers/settings/companies_controller.rb:3: syntax error, unexpected ':', expecting kEND
+   before_filter : get_company
+                  ^):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 21:45:02 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 21:45:02 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 21:45:02 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 21:45:02 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sun Aug 07 21:45:05 -0600 2011
+
+ActionController::RoutingError (undefined local variable or method `get_company' for Settings::CompaniesController:Class):
+  app/controllers/settings/companies_controller.rb:2
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 21:45:22 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 21:45:22 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 21:45:22 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 21:45:22 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sun Aug 07 21:45:25 -0600 2011
+
+SyntaxError (/Users/stephencote/Documents/Rails/redrhinomail/app/controllers/settings/companies_controller.rb:3: syntax error, unexpected ':', expecting kEND
+   before_filter : get_company
+                  ^):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 21:46:37 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 21:46:37 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 21:46:37 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 21:46:37 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sun Aug 07 21:46:40 -0600 2011
+
+SyntaxError (/Users/stephencote/Documents/Rails/redrhinomail/app/controllers/settings/companies_controller.rb:2: syntax error, unexpected ':', expecting kEND
+   before_filter :login_required : get_company
+                                  ^):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 21:47:07 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 21:47:07 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 21:47:07 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (52ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 21:47:07 -0600 2011
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sun Aug 07 21:47:13 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 21:47:13 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 21:47:14 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 21:47:14 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 21:47:14 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Aug 07 21:47:18 -0600 2011
+  Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 21:47:18 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 54ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 21:47:18 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 21:47:18 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 21:47:18 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 21:47:18 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sun Aug 07 21:47:22 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 21:47:22 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 21:47:22 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 21:47:22 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 21:47:22 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 22:02:10 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 22:02:11 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 22:02:11 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 22:02:11 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 22:03:48 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 22:03:48 -0600 2011
+Served asset /style.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 22:03:48 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 22:03:48 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/lists" for 127.0.0.1 at Sun Aug 07 22:03:50 -0600 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for Settings::ListsController):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/settings/lists" for 127.0.0.1 at Sun Aug 07 22:04:30 -0600 2011
+  Processing by Settings::ListsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at Sun Aug 07 22:04:30 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 22:04:30 -0600 2011
+Served asset /style.css - 404 Not Found (53ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 22:04:30 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 22:04:30 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Aug 07 22:04:39 -0600 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"h0jQO2BVlYsYD7kWDpYZ+hvxaBtds2YkN6XEFbwVY0A=", "utf8"=>"\342\234\223", "password"=>"[FILTERED]", "login"=>"cadecote"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'cadecote' LIMIT 1[0m
+Redirected to http://localhost:3000/settings/lists
+Completed 302 Found in 132ms
+
+
+Started GET "/settings/lists" for 127.0.0.1 at Sun Aug 07 22:04:39 -0600 2011
+  Processing by Settings::ListsController#index as HTML
+  [1m[35mUser Load (6.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 28ms
+
+NoMethodError (undefined method `list' for #<User:0x1075b7e00>):
+  app/controllers/settings/lists_controller.rb:22:in `get_list'
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.5ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Sun Aug 07 22:04:52 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+Rendered settings/companies/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 49ms (Views: 10.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Sun Aug 07 22:04:52 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Sun Aug 07 22:04:52 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Sun Aug 07 22:04:52 -0600 2011
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
