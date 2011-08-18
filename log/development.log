@@ -2375,3 +2375,16 @@ Migrating to AddContactsTable (20110818044031)
   [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("companies")[0m
   [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20110805044057)
+Migrating to CreateCompanies (20110806054036)
+Migrating to AddContactsTable (20110818044031)
+Migrating to CreateLists (20110818051432)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "is_active" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110818051432')
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("companies")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("lists")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
