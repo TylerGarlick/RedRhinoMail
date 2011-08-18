@@ -2098,3 +2098,280 @@ ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
   
 
 Rendered /Users/stephencote/.gem/ruby/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (104.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (25.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20110805044057)
+  [1m[35m (0.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20110805044057)
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110805044057')[0m
+Migrating to CreateCompanies (20110806054036)
+  [1m[35m (0.2ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110806054036')[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("companies")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20110805044057)
+Migrating to CreateCompanies (20110806054036)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("companies")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-17 22:32:36 -0600
+  Processing by DashboardsController#show as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-08-17 22:32:36 -0600
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 84ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at 2011-08-17 22:32:36 -0600
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-08-17 22:32:36 -0600
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2011-08-17 22:32:36 -0600
+Served asset /style.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-08-17 22:32:36 -0600
+  Processing by SessionsController#new as */*
+Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at 2011-08-17 22:32:40 -0600
+  Processing by Settings::CompaniesController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-08-17 22:32:40 -0600
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2011-08-17 22:32:40 -0600
+Served asset /style.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-08-17 22:32:40 -0600
+  Processing by SessionsController#new as */*
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at 2011-08-17 22:32:40 -0600
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-08-17 22:32:40 -0600
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/lists" for 127.0.0.1 at 2011-08-17 22:32:41 -0600
+  Processing by Settings::ListsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-08-17 22:32:41 -0600
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-08-17 22:32:41 -0600
+  Processing by SessionsController#new as */*
+Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-08-17 22:32:41 -0600
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2011-08-17 22:32:41 -0600
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at 2011-08-17 22:32:41 -0600
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (24ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-08-17 22:32:46 -0600
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (8.0ms)
+Rendered users/new.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2011-08-17 22:32:46 -0600
+Served asset /style.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-08-17 22:32:46 -0600
+  Processing by UsersController#new as */*
+Rendered users/_form.html.erb (6.9ms)
+Rendered users/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at 2011-08-17 22:32:46 -0600
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-08-17 22:32:46 -0600
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-08-17 22:32:55 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YrX0S3bnpOSUyRDv0EeQf/SPxGfHDaMJsWVGpySFYEU=", "user"=>{"username"=>"TylerGarlick", "email"=>"tjgarlick@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'TylerGarlick' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'tjgarlick@gmail.com' LIMIT 1
+  [1m[36mSQL (31.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Aug 2011 04:32:55 UTC +00:00], ["email", "tjgarlick@gmail.com"], ["password_hash", "$2a$10$Dqj4zNB.2x0lpEo8MQbMpu5Q0Eg8w6Clb1emCfvZMKxoonNTwZ6Ou"], ["password_salt", "$2a$10$Dqj4zNB.2x0lpEo8MQbMpu"], ["updated_at", Thu, 18 Aug 2011 04:32:55 UTC +00:00], ["username", "TylerGarlick"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 229ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-17 22:32:55 -0600
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.3ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 150ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    33: 		<div id="container">
+    34: 	    <header>
+    35: 				<% if current_user %>
+    36: 				<div class="company-name"><%= current_user.company.name %></div>
+    37: 				<% end %>
+    38: 				<ul class="navigation">
+    39: 					<li><%= link_to 'Dashboard', root_url %></li>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___1718636944184675957_70184216525340'
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-17 22:32:55 -0600
+  Processing by DashboardsController#show as */*
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.3ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    33: 		<div id="container">
+    34: 	    <header>
+    35: 				<% if current_user %>
+    36: 				<div class="company-name"><%= current_user.company.name %></div>
+    37: 				<% end %>
+    38: 				<ul class="navigation">
+    39: 					<li><%= link_to 'Dashboard', root_url %></li>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___1718636944184675957_70184216525340'
+
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/tylergarlick/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.3ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (23.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20110805044057)
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110805044057')[0m
+Migrating to CreateCompanies (20110806054036)
+  [1m[35m (0.3ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "phone" varchar(255), "website" varchar(255), "is_active" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110806054036')[0m
+Migrating to AddContactsTable (20110818044031)
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110818044031')
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("companies")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
