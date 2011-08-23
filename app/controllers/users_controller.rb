@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 	  @users = current_user.company.users
   end
   def new
-    @user = User.new
+    @user =  User.new
   end
 
   def create
