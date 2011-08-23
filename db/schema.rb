@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(:version => 20110818051432) do
     t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "company_id"
+    t.integer  "role_id"
   end
 
 end
