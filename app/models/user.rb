@@ -14,7 +14,6 @@ class User < ActiveRecord::Base
   validates_length_of :password, :minimum => 4, :allow_blank => true
 
   belongs_to :company
-  has_many :customers
   belongs_to :role
 
 

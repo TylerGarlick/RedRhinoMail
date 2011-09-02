@@ -4094,3 +4094,545 @@ ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
   
 
 Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/lists" for 127.0.0.1 at Mon Aug 22 23:43:27 -0600 2011
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+):
+  app/controllers/settings/lists_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.8ms)
+
+
+Started GET "/settings/lists" for 127.0.0.1 at Mon Aug 22 23:43:43 -0600 2011
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+):
+  app/controllers/settings/lists_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Aug 22 23:46:16 -0600 2011
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+):
+  app/controllers/users_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Aug 22 23:48:20 -0600 2011
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+):
+  app/controllers/users_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Aug 22 23:49:51 -0600 2011
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+):
+  app/controllers/users_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Aug 22 23:50:15 -0600 2011
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+):
+  app/controllers/users_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Aug 22 23:50:33 -0600 2011
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+):
+  app/controllers/users_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.8ms)
+
+
+Started GET "/settngs" for 127.0.0.1 at Mon Aug 22 23:53:47 -0600 2011
+
+ActionController::RoutingError (No route matches [GET] "/settngs"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings" for 127.0.0.1 at Mon Aug 22 23:53:52 -0600 2011
+
+ActionController::RoutingError (No route matches [GET] "/settings"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Mon Aug 22 23:53:57 -0600 2011
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+):
+  app/controllers/settings/companies_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.8ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 00:10:43 -0600 2011
+  Processing by DashboardsController#show as HTML
+SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("users")
+Completed 500 Internal Server Error in 76ms
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("users")):
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  lib/controller_authentication.rb:36:in `login_required'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 23 00:12:02 -0600 2011
+  Processing by DashboardsController#show as HTML
+SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("users")
+Completed 500 Internal Server Error in 60ms
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("users")):
+  lib/controller_authentication.rb:24:in `current_user'
+  lib/controller_authentication.rb:28:in `logged_in?'
+  lib/controller_authentication.rb:36:in `login_required'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Sep 01 21:56:52 -0600 2011
+  Processing by DashboardsController#show as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at Thu Sep 01 21:56:53 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Thu Sep 01 21:56:53 -0600 2011
+Served asset /style.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Thu Sep 01 21:56:53 -0600 2011
+Served asset /defaults.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Thu Sep 01 21:56:53 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (13ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Thu Sep 01 21:56:53 -0600 2011
+Served asset /defaults.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Sep 01 22:27:53 -0600 2011
+SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed:           SELECT name
+          FROM sqlite_master
+          WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+):
+  app/controllers/users_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Thu Sep 01 22:28:09 -0600 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"jy/hKnY5i9wL+lXi3aznCApMTxsoaeSTXqRCQvzVfFE=", "utf8"=>"\342\234\223", "password"=>"[FILTERED]", "login"=>"cadecote"}
+SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("users")
+Completed 500 Internal Server Error in 13ms
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("users")):
+  app/models/user.rb:23:in `authenticate'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at Thu Sep 01 22:33:37 -0600 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Thu Sep 01 22:33:37 -0600 2011
+Served asset /style.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Thu Sep 01 22:33:37 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Thu Sep 01 22:33:37 -0600 2011
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Thu Sep 01 22:33:44 -0600 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"jy/hKnY5i9wL+lXi3aznCApMTxsoaeSTXqRCQvzVfFE=", "utf8"=>"\342\234\223", "password"=>"[FILTERED]", "login"=>"cotecade"}
+SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("users")
+Completed 500 Internal Server Error in 13ms
+
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("users")):
+  app/models/user.rb:23:in `authenticate'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.9ms)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20110805044057)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime, "company_id" integer, "role_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110805044057')[0m
+Migrating to CreateCompanies (20110806054036)
+  [1m[35m (0.3ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "phone" varchar(255), "website" varchar(255), "is_active" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110806054036')[0m
+Migrating to AddContactsTable (20110818044031)
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110818044031')
+Migrating to CreateLists (20110818051432)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "is_active" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110818051432')
+Migrating to CreateRoles (20110823045840)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "is_active" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110823045840')
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("companies")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("lists")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("roles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/signup" for 127.0.0.1 at Thu Sep 01 22:37:54 -0600 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (10.2ms)
+Rendered users/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Thu Sep 01 22:37:54 -0600 2011
+Served asset /style.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Thu Sep 01 22:37:54 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Thu Sep 01 22:37:54 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at Thu Sep 01 22:38:10 -0600 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"jy/hKnY5i9wL+lXi3aznCApMTxsoaeSTXqRCQvzVfFE=", "utf8"=>"\342\234\223", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"cadecote", "password"=>"[FILTERED]", "email"=>"ccote@nexbusiness.com"}}
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'cadecote' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'ccote@nexbusiness.com' LIMIT 1
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "users" ("company_id", "created_at", "email", "password_hash", "password_salt", "role_id", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", nil], ["created_at", Fri, 02 Sep 2011 04:38:11 UTC +00:00], ["email", "ccote@nexbusiness.com"], ["password_hash", "$2a$10$fbIUgDunrcgdm1j0VCAYs.qskQ9v42kAMaNIythHVtMYEydezVv52"], ["password_salt", "$2a$10$fbIUgDunrcgdm1j0VCAYs."], ["role_id", nil], ["updated_at", Fri, 02 Sep 2011 04:38:11 UTC +00:00], ["username", "cadecote"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 187ms
+
+
+Started GET "/" for 127.0.0.1 at Thu Sep 01 22:38:11 -0600 2011
+  Processing by DashboardsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Rendered dashboards/show.html.erb within layouts/application (0.4ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 108ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    33: 		<div id="container">
+    34: 	    <header>
+    35: 				<% if current_user %>
+    36: 				<div class="company-name"><%= current_user.company.name %></div>
+    37: 				<% end %>
+    38: 				<ul class="navigation">
+    39: 					<li><%= link_to 'Dashboard', root_url %></li>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___1241659434_2197168440'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.2ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Thu Sep 01 22:38:33 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" IS NULL LIMIT 1[0m
+Rendered settings/companies/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 70ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @company.name %></h1>
+    2: <div class="actions"><%= link_to 'Edit', edit_settings_company_url(@company) %></div>
+  app/views/settings/companies/index.html.erb:1:in `_app_views_settings_companies_index_html_erb___248910864_2203594640'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/settings/companies" for 127.0.0.1 at Thu Sep 01 22:40:19 -0600 2011
+  Processing by Settings::CompaniesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered settings/companies/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 30ms (Views: 11.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Thu Sep 01 22:40:19 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Thu Sep 01 22:40:19 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Thu Sep 01 22:40:19 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Thu Sep 01 22:40:19 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/settings/companies/1/edit" for 127.0.0.1 at Thu Sep 01 22:40:21 -0600 2011
+  Processing by Settings::CompaniesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered settings/companies/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 109ms (Views: 18.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/libs/modernizr-1.7.min.js" for 127.0.0.1 at Thu Sep 01 22:40:22 -0600 2011
+Served asset /libs/modernizr-1.7.min.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/libs/modernizr-1.7.min.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at Thu Sep 01 22:40:22 -0600 2011
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at Thu Sep 01 22:40:22 -0600 2011
+Served asset /style.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/style.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started PUT "/settings/companies/1" for 127.0.0.1 at Thu Sep 01 22:40:31 -0600 2011
+  Processing by Settings::CompaniesController#update as HTML
+  Parameters: {"company"=>{"name"=>"cade co", "website"=>"www.cadeisdabomb.com", "phone"=>"5555555555"}, "commit"=>"Update", "authenticity_token"=>"jy/hKnY5i9wL+lXi3aznCApMTxsoaeSTXqRCQvzVfFE=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "companies" WHERE ("companies"."name" = 'cade co' AND "companies"."id" != 1) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "companies" SET "website" = 'www.cadeisdabomb.com', "updated_at" = '2011-09-02 04:40:31.537295' WHERE "companies"."id" = 1[0m
+Redirected to http://localhost:3000/settings/companies/1
+Completed 302 Found in 87ms
+
+
+Started GET "/settings/companies/1" for 127.0.0.1 at Thu Sep 01 22:40:31 -0600 2011
+  Processing by Settings::CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 70ms
+
+ActionView::MissingTemplate (Missing template settings/companies/show, application/show with {:handlers=>[:builder, :erb], :locale=>[:en, :en], :formats=>[:html]}. Searched in:
+  * "/Users/stephencote/Documents/Rails/redrhinomail/app/views"
+):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/settings/lists" for 127.0.0.1 at Thu Sep 01 22:40:49 -0600 2011
+  Processing by Settings::ListsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 17ms
+
+NoMethodError (undefined method `list' for #<User:0x105b60b88>):
+  app/controllers/settings/lists_controller.rb:22:in `get_list'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.7ms)
